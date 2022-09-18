@@ -6,7 +6,7 @@ const Pagination = ({ count }) => {
 		let elements = []
 
 		for (let i = 0; i < count; i++) {
-			elements.push(<Button>Test</Button>)
+			elements.push(<Button>test</Button>)
 		}
 
 		return elements

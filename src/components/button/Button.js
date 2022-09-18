@@ -4,7 +4,7 @@ import { ButtonWrapper } from './Button.styled'
 const Button = ({ action, isActive, children }) => {
 	return (
 		<ButtonWrapper onClick={action} isActive={isActive}>
-			{children}
+			{children}  
 		</ButtonWrapper>
 	)
 }
