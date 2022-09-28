@@ -1,4 +1,4 @@
-import Button from '../button/Button'
+import Button from '../Button/Button'
 import { PaginationWrapper } from './Pagination.styled'
 
 const Pagination = ({ count }) => {
@@ -6,7 +6,7 @@ const Pagination = ({ count }) => {
 		let elements = []
 
 		for (let i = 0; i < count; i++) {
-			elements.push(<Button>test</Button>)
+			elements.push(<Button>{i + 1}</Button>)
 		}
 
 		return elements
@@ -22,3 +22,6 @@ const Pagination = ({ count }) => {
 }
 
 export default Pagination
+
+
+// buttony ostylowac i dokumentacja

@@ -25,8 +25,20 @@ export const PokemonListRowItem = styled.div`
 	justify-content: ${({ justifyContent }) => justifyContent};
 `
 
-export const PokemonListHeader = styled(PokemonListRow)`
-	font-weight: bold;
+export const PokemonListHeader = styled.div`
+	display: grid;
+	width: 100%;
+	grid-template-columns: ${({ columnsNumber, gridTemplateColumns }) => {
+		if (columnsNumber) {
+			return `repeat(${columnsNumber}, minmax(0, 1fr))`
+		} else if (gridTemplateColumns) {
+			return gridTemplateColumns
+		}
+
+		return `minmax(0, 1fr)`
+	}};
+	grid-auto-flow: column;
+	background-color: ${({ backgroundColor }) => backgroundColor};
 `
 
 export const PokemonList = styled.div`
@@ -49,7 +61,7 @@ export const PokemonList = styled.div`
 		transition: background-color 0.3s;
 
 		:hover {
-			background-color: #1a5cb0;
+			background-color:   ${({ rowsHoverBackgroundColor }) => rowsHoverBackgroundColor};
 			color: yellow;
 			cursor: pointer;
 		}
